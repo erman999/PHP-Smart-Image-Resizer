@@ -44,3 +44,16 @@ smart_image_resizer('images/melons.jpg', 'images/resized_melons.jpg', 500);
 The above example output : `true`
 
 ![Example-2](https://raw.githubusercontent.com/erman999/PHP-Smart-Image-Resizer/master/examples/example2.jpg)
+
+
+#### Example #3 Quality
+
+You can change quality of destination image. Let's say we want to resize and reduce quality of new image to 75%. Usually 75% is very good most of the time. Compare file sizes with previous example. File size is reduced almost 90% without losing quality.
+
+```php
+smart_image_resizer('images/melons.jpg', 'images/resized_melons.jpg', 500, 75);
+```
+
+The above example output : `true`
+
+![Example-3](https://raw.githubusercontent.com/erman999/PHP-Smart-Image-Resizer/master/examples/example3.jpg)
