@@ -3,10 +3,14 @@
 This function resizes image preserving aspect ratio and background transparency also catches some tricky image issues and returns what is problem.
 The function uses GD library only, which is extensively found in almost every PHP installation.
 
+<br/>
+
 ## Description
 ```php
-filename_prefixer ( string $src_image , string $dst_image , string $size , $quality = 100 ) true : string
+smart_image_resizer ( string $src_image , string $dst_image , string $size , $quality = 100 ) true : string
 ```
+
+<br/>
 
 ## Parameters
 - **src_image :** Source image resource.
@@ -14,9 +18,12 @@ filename_prefixer ( string $src_image , string $dst_image , string $size , $qual
 - **size :** Destination width or height depending on greater size of source image
 - **quality :** Quality is optional, and ranges from 0 (worst quality, smaller file) to 100 (best quality, biggest file)
 
+<br/>
+
 ## Return Values
 Returns true on success or string on failure.
 
+<br/>
 
 ## Examples
 
@@ -59,5 +66,19 @@ smart_image_resizer('images/melons.jpg', 'images/resized_melons.jpg', 500, 75);
 The above example output : `true`
 
 ![Example-3](https://raw.githubusercontent.com/erman999/PHP-Smart-Image-Resizer/master/examples/example3.jpg)
+
+<br/>
+
+#### Example #4 Transparent background
+
+When an image resized it usually lose transparency and all transparent pixels turn to black. This function preserves transparency as well but only for PNG images so far.
+
+```php
+smart_image_resizer('images/fruits.jpg', 'images/resized_fruits.jpg', 500, 100);
+```
+
+The above example output : `true`
+
+![Example-4](https://raw.githubusercontent.com/erman999/PHP-Smart-Image-Resizer/master/examples/example4.jpg)
 
 <br/>
