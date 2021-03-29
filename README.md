@@ -84,7 +84,7 @@ Output : `true`
 
 ## Errors
 
-Function returns true if everything is alright. When an error occurs it return a string value to tell what is wrong. See examples below.
+Function returns true if everything is alright. When an error occur it returns a string to tell what is wrong. See examples below.
 
 ```php
 smart_image_resizer('fruits', 'fruits2.jpg', 500, 100);
