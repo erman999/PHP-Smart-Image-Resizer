@@ -20,9 +20,7 @@ Returns true on success or string on failure.
 
 ## Examples
 
-### Example #1 Simple example
-
-Check sizes 2827x2827 reduced to 500x500 also filesize is reduced.
+#### Example #1 Simple example
 
 ```php
 smart_image_resizer('images/apple.jpg', 'images/resized_apple.jpg', 500);
@@ -35,7 +33,7 @@ The above example output : `true`
 <br/>
 
 
-### Example #2 Long size adjustment
+#### Example #2 Long size adjustment
 
 Not all images are square. Sometimes width is greater than height and sometimes height is greater than width. However, we define only one size parameter. This is because function always preserves aspect ratio. The function takes long size of source image scales it according to given parameter value.
 
