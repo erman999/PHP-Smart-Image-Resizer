@@ -2,6 +2,8 @@
 
 Function uses GD only, which is extensively found in almost every PHP installation. It resize images preserving aspect ratio and background transparency also catches some tricky image issues and returns what is wrong as string. Also if the image is a photo taken with a mobile phone or professional camera, it usually faces 90 degrees to the left by default. When this issue detected image will automatically be rotated to correct position. It is easy to use, robust and fast. Enjoy.
 
+<br/>
+
 ## Description
 ```php
 smart_image_resizer ( string $src_image , string $dst_image , string $size , $quality = 100 ) true : string
