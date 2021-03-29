@@ -1,9 +1,6 @@
 # PHP-Smart-Image-Resizer
 
-This function resizes image preserving aspect ratio and background transparency also catches some tricky image issues and returns what is problem.
-The function uses GD library only, which is extensively found in almost every PHP installation.
-
-<br/>
+Function uses GD only, which is extensively found in almost every PHP installation. It resize images preserving aspect ratio and background transparency also catches some tricky image issues and returns what is wrong as string. Also if the image is a photo taken with a mobile phone or professional camera, it usually faces 90 degrees to the left by default. When this issue detected image will automatically be rotated to correct position. It is easy to use, robust and fast. Enjoy.
 
 ## Description
 ```php
@@ -35,7 +32,7 @@ Returns true on success or string on failure.
 smart_image_resizer('images/apple.jpg', 'images/resized_apple.jpg', 500);
 ```
 
-The above example output : `true`
+Output : `true`
 
 ![Example-1](https://raw.githubusercontent.com/erman999/PHP-Smart-Image-Resizer/master/examples/example1.jpg)
 
@@ -49,7 +46,7 @@ Not all images are square. Sometimes width is greater than height and sometimes 
 smart_image_resizer('images/melons.jpg', 'images/resized_melons.jpg', 500);
 ```
 
-The above example output : `true`
+Output : `true`
 
 ![Example-2](https://raw.githubusercontent.com/erman999/PHP-Smart-Image-Resizer/master/examples/example2.jpg)
 
@@ -63,7 +60,7 @@ You can change quality of destination image. Let's say we want to resize and red
 smart_image_resizer('images/melons.jpg', 'images/resized_melons.jpg', 500, 75);
 ```
 
-The above example output : `true`
+Output : `true`
 
 ![Example-3](https://raw.githubusercontent.com/erman999/PHP-Smart-Image-Resizer/master/examples/example3.jpg)
 
@@ -77,8 +74,42 @@ When an image resized it usually lose transparency and all transparent pixels tu
 smart_image_resizer('images/fruits.jpg', 'images/resized_fruits.jpg', 500, 100);
 ```
 
-The above example output : `true`
+Output : `true`
 
 ![Example-4](https://raw.githubusercontent.com/erman999/PHP-Smart-Image-Resizer/master/examples/example4.jpg)
+
+<br/>
+
+## Errors
+
+Function returns true if everything is alright. When an error occurs it return a string value to tell what is wrong. See examples below.
+
+```php
+smart_image_resizer('fruits', 'fruits2.jpg', 500, 100);
+
+smart_image_resizer('fruits.jpg', 'fruits2', 500, 100);
+
+smart_image_resizer('fruits.jpg', 'fruits2.png', 500, 100);
+```
+
+Output : `Source file extension and target file extension doesn't match or doesn't exist!`
+
+<br/>
+
+```php
+smart_image_resizer('fruits.jpg', 'fruits2.jpg', 500, 100);
+```
+
+> This error occurs when image type (e.g PNG) saved with wrong extension (e.g JPG)
+
+Output : `Image MIME type 'image/png' and image extension 'jpg' doesn't match!`
+
+<br/>
+
+```php
+smart_image_resizer('fruits.tga', 'fruits2.jpg', 500, 100);
+```
+
+Output : `Unsupported image type!`
 
 <br/>

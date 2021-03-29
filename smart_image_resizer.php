@@ -2,7 +2,7 @@
   function smart_image_resizer($src_image, $dst_image, $size, $quality = 100){
 
   // Get image info
-  if(!$imagesize = getimagesize($src_image)) return "Unsupported picture type!";
+  if(!$imagesize = getimagesize($src_image)) return "Unsupported image type!";
 
   // Get file type
   $type = $imagesize['mime'];
@@ -45,7 +45,7 @@
   case 'image/png': $src_image = imagecreatefrompng($src_image); break;
   case 'image/bmp': $src_image = imagecreatefrombmp($src_image); break;
   case 'image/gif': $src_image = imagecreatefromgif($src_image); break;
-  default : return "Unsupported picture type!";
+  default : return "Unsupported image type!";
   }
 
   // Fix image rotation
@@ -100,7 +100,7 @@
   case 'image/png': $output = imagepng($dst_image, $dst_path, round($quality * 9 / 100)); break;
   case 'image/bmp': $output = imagebmp($dst_image, $dst_path); break;
   case 'image/gif': $output = imagegif($dst_image, $dst_path); break;
-  default : return "Unsupported picture type!";
+  default : return "Unsupported image type!";
   }
 
   // Return true:string
