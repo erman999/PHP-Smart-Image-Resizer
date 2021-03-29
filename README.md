@@ -20,6 +20,8 @@ Returns true on success or string on failure.
 
 ## Examples
 
+<br/>
+
 #### Example #1 Simple example
 
 ```php
@@ -31,7 +33,6 @@ The above example output : `true`
 ![Example-1](https://raw.githubusercontent.com/erman999/PHP-Smart-Image-Resizer/master/examples/example1.jpg)
 
 <br/>
-
 
 #### Example #2 Long size adjustment
 
@@ -45,6 +46,7 @@ The above example output : `true`
 
 ![Example-2](https://raw.githubusercontent.com/erman999/PHP-Smart-Image-Resizer/master/examples/example2.jpg)
 
+<br/>
 
 #### Example #3 Quality
 
@@ -57,3 +59,5 @@ smart_image_resizer('images/melons.jpg', 'images/resized_melons.jpg', 500, 75);
 The above example output : `true`
 
 ![Example-3](https://raw.githubusercontent.com/erman999/PHP-Smart-Image-Resizer/master/examples/example3.jpg)
+
+<br/>
