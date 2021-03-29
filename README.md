@@ -20,7 +20,7 @@ smart_image_resizer ( string $src_image , string $dst_image , string $size , $qu
 <br/>
 
 ## Return Values
-Returns true on success or string on failure.
+Returns `true` on success or `string` on failure.
 
 <br/>
 
@@ -28,7 +28,7 @@ Returns true on success or string on failure.
 
 <br/>
 
-#### Example #1 Simple example
+### Example #1 Simple example
 
 ```php
 smart_image_resizer('images/apple.jpg', 'images/resized_apple.jpg', 500);
@@ -40,7 +40,7 @@ Output : `true`
 
 <br/>
 
-#### Example #2 Long size adjustment
+### Example #2 Long size adjustment
 
 Not all images are square. Sometimes width is greater than height and sometimes height is greater than width. However, we define only one size parameter. This is because function always preserves aspect ratio. The function takes long size of source image scales it according to given parameter value.
 
@@ -54,7 +54,7 @@ Output : `true`
 
 <br/>
 
-#### Example #3 Quality
+### Example #3 Quality
 
 You can change quality of destination image. Let's say we want to resize and reduce quality of new image to 75%. Usually 75% is very good most of the time. Compare file sizes with previous example. File size is reduced almost 90% without losing quality.
 
@@ -68,7 +68,7 @@ Output : `true`
 
 <br/>
 
-#### Example #4 Transparent background
+### Example #4 Transparent background
 
 When an image resized it usually lose transparency and all transparent pixels turn to black. This function preserves transparency as well but only for PNG images so far.
 
