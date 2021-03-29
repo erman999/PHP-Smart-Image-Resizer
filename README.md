@@ -20,7 +20,7 @@ Returns true on success or string on failure.
 
 ## Examples
 
-#### Example #1 Simple example
+#### Example #1 Simple example
 
 ```php
 smart_image_resizer('images/apple.jpg', 'images/resized_apple.jpg', 500);
