@@ -31,7 +31,7 @@ Returns `true` on success or `string` on failure.
 ### Example #1 Simple example
 
 ```php
-smart_image_resizer('images/apple.jpg', 'images/resized_apple.jpg', 500);
+smart_image_resizer('apple.jpg', 'resized_apple.jpg', 500);
 ```
 
 Output : `true`
@@ -45,7 +45,7 @@ Output : `true`
 Not all images are square. Sometimes width is greater than height and sometimes height is greater than width. However, we define only one size parameter. This is because function always preserves aspect ratio. The function takes long size of source image scales it according to given parameter value.
 
 ```php
-smart_image_resizer('images/melons.jpg', 'images/resized_melons.jpg', 500);
+smart_image_resizer('melons.jpg', 'resized_melons.jpg', 500);
 ```
 
 Output : `true`
@@ -59,7 +59,7 @@ Output : `true`
 You can change quality of destination image. Let's say we want to resize and reduce quality of new image to 75%. Usually 75% is very good most of the time. Compare file sizes with previous example. File size is reduced almost 90% without losing quality.
 
 ```php
-smart_image_resizer('images/melons.jpg', 'images/resized_melons.jpg', 500, 75);
+smart_image_resizer('melons.jpg', 'resized_melons.jpg', 500, 75);
 ```
 
 Output : `true`
@@ -73,7 +73,7 @@ Output : `true`
 When an image resized it usually lose transparency and all transparent pixels turn to black. This function preserves transparency as well but only for PNG images so far.
 
 ```php
-smart_image_resizer('images/fruits.jpg', 'images/resized_fruits.jpg', 500, 100);
+smart_image_resizer('fruits.jpg', 'resized_fruits.jpg', 500, 100);
 ```
 
 Output : `true`
